@@ -1,0 +1,80 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "import",
+        "jsx-a11y"
+    ],
+    "rules": {
+        "no-mixed-spaces-and-tabs": 0,
+        "quotes": ["off", "backtick", { "avoidEscape": true }],
+        "indent": [2, "tab", { "SwitchCase": 1, "VariableDeclarator": 1 }],
+        "no-multiple-empty-lines": [2, {"max": 99999, "maxEOF": 0}],
+        "no-tabs": 0,
+        "import/no-unresolved": "off",
+        "@typescript-eslint/comma-dangle": "off",
+        "import/prefer-default-export": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "comma-dangle": "off",
+        "max-len": "off",
+        "no-console": "off",
+        "no-param-reassign": "off",
+        "no-plusplus": "off",
+        "no-return-assign": "off",
+        "object-curly-newline": "off",
+        "react/forbid-prop-types": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-max-props-per-line": [
+            0,
+            {
+                "when": "always"
+            }
+        ],
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "off",
+        "linebreak-style": "off",
+        "import/no-cycle": "off",
+        "no-promise-executor-return": "off",
+        "react/function-component-definition": "off",
+        "class-methods-use-this": 0,
+        "arrow-body-style": "off",
+        "react/prop-types": 0,
+        "react/self-closing-comp": "off",
+        "jsx-a11y/control-has-associated-label": "off",
+        "react/jsx-props-no-multi-spaces": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/no-array-index-key": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "react/no-array-index-key": "off",
+        "jsx-a11y/control-has-associated-label": "off",
+        "react/jsx-props-no-multi-spaces": "off",
+        "react/jsx-boolean-value": "off",
+        "react/jsx-props-no-mul\nti-spaces": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/jsx-indent": [2, "tab"],
+        "react/jsx-indent-props": [2, "tab"],
+        "import/no-extraneous-dependencies": "off",
+        "consistent-return": "off",
+        "jsx-a11y/media-has-caption": "off"
+    }
+}
+

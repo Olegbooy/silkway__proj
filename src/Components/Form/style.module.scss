@@ -1,0 +1,54 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/fonts.scss';
+
+.form{
+  background: $wh;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 680px;
+  padding: 70px 100px;
+  @media(max-width: 1100px) {
+    max-width: 560px;
+  }
+  @media (max-width: 500px) {
+    border-radius: 25px;
+    padding: 40px;
+  }
+  .socket{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    .description{
+      @include fontChar($blue, 22px, 700);
+    }
+    .input{
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $blue !important;
+      padding: 10px 0;
+      @include fontChar($blue, 22px, 700);
+      font-family: $aero;
+      resize: none;
+      &::placeholder{
+        @include fontChar(rgba(27, 69, 115, 0.6), 18px, 400);
+        font-family: $aero;
+      }
+    }
+  }
+  button{
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    background: $yellow;
+    @include fontChar($wh, 22px, 700);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background .3s ease;
+    &:hover{
+      background: $blue;
+    }
+  }
+}

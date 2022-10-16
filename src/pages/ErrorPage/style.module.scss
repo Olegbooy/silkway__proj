@@ -1,0 +1,30 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/fonts.scss';
+
+.error{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 3vw;
+  p{
+    height: fit-content;
+    @include fontChar($blue, 165px, 400);
+    font-family: $bebas;
+  }
+  svg{
+    margin: 0 3px;
+  }
+  & > div{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h2{
+    @include fontChar($blue, 34px, 700);
+    font-family: $aero;
+  }
+}

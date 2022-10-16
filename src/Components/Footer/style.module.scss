@@ -1,0 +1,88 @@
+@import '../../scss/fonts.scss';
+@import '../../scss/mixins.scss';
+.footer{
+  background: $blue;
+  padding: 6rem 0;
+  @media(max-width: 992px) {
+    padding: 4rem 0;
+  }
+  .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media(max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left{
+      flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+      @media(max-width: 992px) {
+        margin-bottom: 1rem;
+      }
+      h2{
+        @include fontChar($wh, 70px, 700);
+        font-family: $aero;
+        margin-bottom: 3rem;
+      }
+      .addresses{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        *{
+          @include fontChar($wh, 15px, 400);
+          font-family: $aero;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          line-height: 1.6;
+        }
+        .post{
+          width: 100%;
+          max-width: 14rem;
+          padding-left:2rem;
+          position: relative;
+          @media (max-width: 500px) {
+            padding-left: 1.5rem;
+          }
+          &:first-child{
+            margin-bottom: 1.5rem;
+            &::before{
+              content: '';
+              position: absolute;
+              top: 5px;
+              left: 0;
+              width: 20px;
+              height: 18px;
+              background: url("../../assets/img/svg/mail.svg") no-repeat center / cover;
+            }
+          }
+          &:last-child{
+            margin-bottom: 1.5rem;
+            &::before{
+              content: '';
+              position: absolute;
+              top: 5px;
+              left: 0;
+              width: 18px;
+              height: 22px;
+              background: url("../../assets/img/svg/location.svg") no-repeat center / cover;
+            }
+          }
+        }
+      }
+    }
+  }
+  .end__text{
+    @include fontChar($wh, 15px, 400);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+}

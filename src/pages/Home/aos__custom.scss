@@ -1,0 +1,10 @@
+[data-aos="right-to-left"]{
+  @media (min-width: 992px) {
+    transition-property: transform;
+    transform: translateX(60%);
+    &.aos-animate {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/fonts.scss';
+
+
+section {
+  min-height: 100vh;
+  padding: 8rem 0;
+  @media (max-width: 992px) {
+    padding: 4rem 0;
+  }
+  &.about__us{
+    .container{
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .left{
+        margin-right: 2rem;
+        @media (max-width: 992px) {
+          width: 100%;
+          margin-bottom: 2rem;
+          margin-right: 0;
+        }
+        .title__wrapper{
+          margin-bottom: 2rem;
+          @media (max-width: 1220px) {
+            margin-bottom: .5rem;
+          }
+          .title{
+            flex-direction: column;
+            width: fit-content;
+            span{
+              &:nth-child(2) {
+                margin-right: 5%;
+              }
+              @media (min-width: 992px) and (max-width: 1220px) {
+                font-size: 130px;
+              }
+            }
+          }
+        }
+        .subtitle{
+          display: flex;
+          flex-direction: column;
+          max-width: 24rem;
+          width: 100%;
+          @media (max-width: 992px) {
+            max-width: 100%;
+          }
+          span{
+            @include fontChar($blue, 22px, 400);
+            font-family: $aero;
+            line-height: 1.5;
+            @media (max-width: 1220px) {
+              font-size: 20px;
+            }
+            &:nth-child(1) {
+              margin-bottom: 1rem;
+              @media (max-width: 1220px) {
+                margin-bottom: .5rem;
+              }
+              @media (max-width: 992px) {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .right{
+        width: fit-content;
+        @media (max-width: 992px) {
+          width: fit-content;
+        }
+        figure{
+          overflow: hidden;
+          border-radius: 20px;
+          cursor: pointer;
+          width: fit-content;
+          height: fit-content;
+          img{
+            max-width: 100%;
+            display: block;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: transform .3s ease;
+          }
+          &:hover img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
